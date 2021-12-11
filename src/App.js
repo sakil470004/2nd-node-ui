@@ -5,6 +5,7 @@ import './App.css';
 function App() {
 
   const [users, setUsers] = useState([])
+  // this take for from onSubmit
   const nameRef = useRef();
   const emailRef = useRef();
 
@@ -53,6 +54,7 @@ function App() {
         <input type='submit' value='submit' />
       </form>
       <ul>
+       {/* map the all user */}
         {users.map(user =>
           <li key={user.id}>{user.id}.{user.name}</li>
         )}
